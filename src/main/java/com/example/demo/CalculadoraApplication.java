@@ -13,7 +13,9 @@ public class CalculadoraApplication {
         SpringApplication.run(CalculadoraApplication.class, args);
         int tablaDeMultiplicar = 0;
         int menu = 0;
-
+		String nombre;
+		System.out.println("¿Cual es su nombre?");
+		nombre = teclado.nextLine();
         System.out.println("ingrese el numero de la opcion que desea realizar: \n");
         System.out.println("1: mostrar una tabla");
         System.out.println("2: mostrar las tablas del nuero 2 al 5");
@@ -25,19 +27,22 @@ public class CalculadoraApplication {
                 System.out.println("ingrese el numero de la tabla de multiplicar que desea ver:");
                 tablaDeMultiplicar = teclado.nextInt();
                 tablaMultiplicar(tablaDeMultiplicar);
+				saludo(nombre);
                 break;
+
             case 2:
-			System.out.println("mostrando las tablas de multiplicar del 2 al 5...\n");
+                System.out.println("mostrando las tablas de multiplicar del 2 al 5...\n");
                 tablaMultiplicar(2);
                 tablaMultiplicar(3);
                 tablaMultiplicar(4);
                 tablaMultiplicar(5);
-
+				saludo(nombre);
                 break;
+
             case 3:
-			System.out.println("gracias por usar esta calculadora :)");
+                System.out.println("gracias por usar esta calculadora :)");
                 return;
-				
+
             default:
                 throw new AssertionError();
         }
@@ -49,7 +54,12 @@ public class CalculadoraApplication {
             resultado = numero * i;
             System.out.println(" " + numero + " X " + i + " =" + " " + resultado);
         }
-	System.out.println("\n");
+        System.out.println("\n");
     }
+
+	public static void saludo(String nombre){
+		System.out.println();
+		System.out.println("gracias por usar nuestro programa "+nombre+ " :)");
+	}
 
 }
