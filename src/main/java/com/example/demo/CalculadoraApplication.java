@@ -27,7 +27,7 @@ public class CalculadoraApplication {
                 tablaMultiplicar(tablaDeMultiplicar);
                 break;
             case 2:
-                System.out.println("mostrando las tablas de multiplicar del 2 al 5...\n");
+			System.out.println("mostrando las tablas de multiplicar del 2 al 5...\n");
                 tablaMultiplicar(2);
                 tablaMultiplicar(3);
                 tablaMultiplicar(4);
@@ -35,8 +35,7 @@ public class CalculadoraApplication {
 
                 break;
             case 3:
-				System.out.println("gracias por usar esta calculadora :)");
-                return;
+				
             default:
                 throw new AssertionError();
         }
