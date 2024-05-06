@@ -35,6 +35,8 @@ public class CalculadoraApplication {
 
                 break;
             case 3:
+			System.out.println("gracias por usar esta calculadora :)");
+                return;
 				
             default:
                 throw new AssertionError();
